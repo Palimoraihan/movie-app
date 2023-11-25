@@ -16,3 +16,18 @@ img{
 img:hover {
     scale: 102%;
 }
+
+.spinner {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   border: 6.4px solid;
+   border-color: #ffc639 #0000;
+   animation: spinner-0tkp9a 1s infinite;
+}
+
+@keyframes spinner-0tkp9a {
+   to {
+      transform: rotate(.5turn);
+   }
+}

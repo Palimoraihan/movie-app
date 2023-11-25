@@ -7,16 +7,16 @@ import { useRef } from 'react';
 const InputSearch = () => {
 	const searchRef = useRef();
 	const router = useRouter();
-	const handleSearch = (event)=>{
-		if (event.key==="Enter"|| event.type==="click") {
-		event.preventDefault();
-		const keyword = searchRef.current.value
-		router.push(`/search/${keyword}`)
-			
+	const handleSearch = (event) => {
+		if (searchRef.current.value!="") {
+			if (event.key === 'Enter' || event.type === 'click') {
+				event.preventDefault();
+				const keyword = searchRef.current.value;
+				router.push(`/search/${keyword}`);
+			}
 		}
 		
-		
-	}
+	};
 	return (
 		<div className="relative">
 			<input
